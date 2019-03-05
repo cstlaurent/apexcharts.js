@@ -27,6 +27,23 @@ const builds = {
     env: 'production',
     banner
   },
+  'web-amd-dev': {
+    entry: resolvePath('src/apexcharts.js'),
+    dest: resolvePath('dist/apexcharts.amd.js'),
+    format: 'amd',
+    env: 'development',
+    globals: {
+      SVG: 'window.SVG'
+    },
+    banner
+  },
+  'web-amd-prod': {
+    entry: resolvePath('src/apexcharts.js'),
+    dest: resolvePath('dist/apexcharts.amd.min.js'),
+    format: 'amd',
+    env: 'production',
+    banner
+  },
   'web-esm': {
     entry: resolvePath('src/apexcharts.js'),
     dest: resolvePath('dist/apexcharts.esm.js'),
